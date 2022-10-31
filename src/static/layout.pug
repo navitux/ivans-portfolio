@@ -1,0 +1,46 @@
+//- base layout of landing page and everthing else
+//- all style customization should start here 
+doctype html
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        //important scripts
+        script(src="//unpkg.com/alpinejs" defer)
+
+        //styles
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css")
+        link(rel="stylesheet", href="static/style.css")
+
+        meta(author="Ivan Robles")
+        meta(name="Ivan's Portfolio" content="This is my personal portfolio and website for more apps and other things made by me")
+        meta(name="robots" content="index, follow")
+        meta(name="keyword" content="portfolio,python,fullstack,ivan,robles,guadalajara")
+        meta(property="og:title" content="Ivan Robles | Software Dev")
+        meta(property="og:description" content="This is my personal portfolio and website for more apps and other things made by me")
+        meta(property="og:type" content="website")
+        title Ivan's Portfolio
+    body
+        //- no-script tag to inform user that must enable javascript execution to run this site
+        noscript
+            h1 YOU NEED RUN JAVASCRIPT TO USE THIS SITE
+        nav.mainav
+            h1.prtfo-tit 🎆 Portfolio
+            ul 
+                li 
+                    a(href="index.pug" role="button") home 🏚️
+                li 
+                    a(href="posts.pug" role="button") posts 📮
+        // particles animation
+        script(src="https://unpkg.com/jparticles/browser/jparticles.base.js")
+        script(src="https://unpkg.com/jparticles/browser/particle.js")
+        div#bg-prt
+        script. 
+            new JParticles.Particle('#bg-prt')
+        block content
+        block foot
+            footer.mainfoot
+                small Ivan Robles <script>document.write(new Date().getFullYear())</script><noscript>2022</noscript> - Creative Commons
+
+

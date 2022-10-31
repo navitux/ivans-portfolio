@@ -1,0 +1,40 @@
+/* global navigation bar */
+.mainav{
+    padding:3%;
+    background-color:rgba(142, 142, 142, 0.264);
+    position:static;
+    backdrop-filter: blur(8px);
+    position:fixed;
+    width:100%;
+    height:15%;
+}
+
+.prtfo-tit{
+    align-items: right;
+    justify-content: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*footer*/
+.mainfoot {
+    text-align: center;
+}
+
+/* pico.css customization */ 
+[data-theme=dark]{
+    --background-color:#181818;
+}
+
+/*particles*/
+#bg-prt{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -100;
+}
+
+.container{
+    padding: 1%;
+    padding-top: 20%;
+}
