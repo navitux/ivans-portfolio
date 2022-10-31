@@ -3,7 +3,7 @@
     padding:3%;
     background-color:rgba(142, 142, 142, 0.264);
     position:static;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
     position:fixed;
     width:100%;
     height:15%;
@@ -22,9 +22,14 @@
 }
 
 /* pico.css customization */ 
-[data-theme=dark]{
-    --background-color:#181818;
+[data-theme=light],
+:root:not([data-theme=dark]) {
+--background-color: rgb(241, 241, 241);
 }
+[data-theme=dark] {
+--background-color: #1c1c1c;
+}
+
 
 /*particles*/
 #bg-prt{
