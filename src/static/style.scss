@@ -1,7 +1,14 @@
+$white-bg-t: rgba(241, 241, 241, 0.263);
+$white-bg-solid: rgb(241, 241, 241);
+
+$black-bg-t: rgba(28, 28, 28, 0.263);
+$black-bg-solid: rgb(28, 28, 28);
+
+
 /* global navigation bar */
 .mainav{
     padding:3%;
-    background-color:rgba(142, 142, 142, 0.264);
+    background-color: $white-bg-t;
     position:static;
     backdrop-filter: blur(3px);
     position:fixed;
@@ -24,11 +31,23 @@
 /* pico.css customization */ 
 [data-theme=light],
 :root:not([data-theme=dark]) {
---background-color: rgb(241, 241, 241);
+    --background-color: $white-bg-solid;
+
+    .mainav{
+        background-color: $black-bg-t;
+    }
 }
-[data-theme=dark] {
---background-color: #1c1c1c;
+
+@media only screen and (prefers-color-scheme: dark) {
+:root:not([data-theme=light]) {
+    --background-color: $black-bg-solid;
+
+    .mainav{
+        background-color: $white-bg-t;
+    }
 }
+}
+
 
 
 /*particles*/
