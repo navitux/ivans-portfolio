@@ -39,12 +39,7 @@ html(lang='en')
         script(src="https://unpkg.com/jparticles/browser/jparticles.base.js")
         script(src="https://unpkg.com/jparticles/browser/particle.js")
         div#bg-prt
-        script. 
-            new JParticles.Particle('#bg-prt',{
-                proximity: 100,
-                range: 100,
-                num: 64,
-            })
+        script(src="static/scripts.js")
         block content
         block foot
             footer.mainfoot
