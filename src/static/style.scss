@@ -4,6 +4,13 @@ $white-bg-solid: rgb(241, 241, 241);
 $black-bg-t: rgba(28, 28, 28, 0.263);
 $black-bg-solid: rgb(28, 28, 28);
 
+input,
+textarea,
+button,
+select,
+a {
+-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+}
 
 /* global navigation bar */
 .mainav{
@@ -21,6 +28,9 @@ $black-bg-solid: rgb(28, 28, 28);
     justify-content: right;
     margin-top: auto;
     margin-bottom: auto;
+}
+.prtfo-tit:active{
+    text-decoration: none;
 }
 
 /*footer*/
@@ -48,14 +58,12 @@ $black-bg-solid: rgb(28, 28, 28);
 }
 }
 
-
-
 /*particles*/
 #bg-prt{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: -100;
+    z-index: -1;
 }
 
 .container{

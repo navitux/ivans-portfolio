@@ -11,6 +11,8 @@ html(lang='en')
         meta(http-equiv="x-ua-compatible" content="ie=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css")
+        //font-awesome
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css")
         link(rel="stylesheet", href="static/style.scss")
 
         meta(author="Ivan Robles")
@@ -26,18 +28,23 @@ html(lang='en')
         noscript
             h1 YOU NEED RUN JAVASCRIPT TO USE THIS SITE
         nav.mainav
-            h1.prtfo-tit 🎆 Portfolio
+            h1.prtfo-tit 
+                <a href="index.pug" data-tooltip="Home" data-placement="bottom">
+                    <i class="fa-solid fa-suitcase"></i></a> Portfolio
             ul 
                 li 
-                    a(href="index.pug" role="button") home 🏚️
-                li 
-                    a(href="posts.pug" role="button") posts 📮
+                    a(href="posts.pug" role="button" data-tooltip="Blog" data-placement="bottom")
+                        <i class="fa-solid fa-blog"></i>
         // particles animation
         script(src="https://unpkg.com/jparticles/browser/jparticles.base.js")
         script(src="https://unpkg.com/jparticles/browser/particle.js")
         div#bg-prt
         script. 
-            new JParticles.Particle('#bg-prt')
+            new JParticles.Particle('#bg-prt',{
+                proximity: 100,
+                range: 100,
+                num: 64,
+            })
         block content
         block foot
             footer.mainfoot
