@@ -4,17 +4,10 @@ doctype html
 html(lang='en')
     head
         meta(charset="utf-8")
-        //important scripts
-        script(src="//unpkg.com/alpinejs" defer)
-
-        //styles
         meta(http-equiv="x-ua-compatible" content="ie=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css")
-        //font-awesome
-        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css")
         link(rel="stylesheet", href="static/style.scss")
-
+        script(src="static/scripts.js" type="module")
         meta(author="Ivan Robles")
         meta(name="Ivan's Portfolio" content="This is my personal portfolio and website for more apps and other things made by me")
         meta(name="robots" content="index, follow")
@@ -27,22 +20,21 @@ html(lang='en')
         //- no-script tag to inform user that must enable javascript execution to run this site
         noscript
             h1 YOU NEED RUN JAVASCRIPT TO USE THIS SITE
+            footer
+                small CC Ivan Robles - 2022  
         nav.mainav
             h1.prtfo-tit 
                 <a href="index.pug" data-tooltip="Home" data-placement="bottom">
                     <i class="fa-solid fa-suitcase"></i></a> Portfolio
             ul 
                 li 
-                    a(href="posts.pug" role="button" data-tooltip="Blog" data-placement="bottom")
+                    a(href="#" role="button" data-tooltip="Blog" data-placement="bottom")
                         <i class="fa-solid fa-blog"></i>
-        // particles animation
-        script(src="https://unpkg.com/jparticles/browser/jparticles.base.js")
-        script(src="https://unpkg.com/jparticles/browser/particle.js")
         div#bg-prt
-        script(src="static/scripts.js")
         block content
         block foot
-            footer.mainfoot
-                small Ivan Robles <script>document.write(new Date().getFullYear())</script><noscript>2022</noscript> - Creative Commons
+            footer#mainfoot
+                small <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" data-tooltip="Creative Commons Attribution 4.0 International License" data-placement="top" style="color:inherit;"><img style="border-width:0" src="static/CC-BY.svg" /> CC BY 4.0</a> - Ivan Robles - 
+                    span#year
 
 

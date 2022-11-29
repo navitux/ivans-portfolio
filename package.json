@@ -11,6 +11,8 @@
     "build": "parcel build src/*.pug"
   },
   "dependencies": {
+    "alpinejs": "^3.10.5",
+    "jparticles": "^3.4.0",
     "parcel": "^2.7.0"
   },
   "devDependencies": {

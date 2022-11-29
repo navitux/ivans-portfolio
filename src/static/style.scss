@@ -1,3 +1,9 @@
+//imports of external CSS through CDN links
+//  picocss
+@import url('https://unpkg.com/@picocss/pico@latest/css/pico.min.css');
+//  font-awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
 $white-bg-t: rgba(241, 241, 241, 0.263);
 $white-bg-solid: rgb(241, 241, 241);
 
@@ -12,7 +18,7 @@ a {
 -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 }
 
-/* global navigation bar */
+// global navigation bar
 .mainav{
     padding:3%;
     background-color: $white-bg-t;
@@ -33,12 +39,12 @@ a {
     text-decoration: none;
 }
 
-/*footer*/
-.mainfoot {
+// footer
+#mainfoot {
     text-align: center;
 }
 
-/* pico.css customization */ 
+// pico.css customization
 [data-theme=light],
 :root:not([data-theme=dark]) {
     --background-color: $white-bg-solid;
