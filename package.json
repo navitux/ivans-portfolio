@@ -7,8 +7,8 @@
   "private": false,
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel src/*.pug",
-    "build": "parcel build src/*.pug"
+    "start": "rm -rf dist; parcel src/*.pug",
+    "build": "rm -rf dist; parcel build src/*.pug"
   },
   "dependencies": {
     "alpinejs": "^3.10.5",

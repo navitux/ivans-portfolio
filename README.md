@@ -6,7 +6,7 @@ Cool Open Source Portfolio made with [Pug](pugjs.org), [SCSS](https://sass-lang.
 
 ## Install & Use
 
-download this repo
+After download this repo:
 
 1.  `yarn` command to install all dependencies
 2.  `yarn start` to start a local web server and preview the blog site

@@ -1,40 +1,46 @@
 //- base layout of landing page and everthing else
-//- all style customization should start here 
+ all style customization should start here 
 doctype html
 html(lang='en')
-    head
-        meta(charset="utf-8")
-        meta(http-equiv="x-ua-compatible" content="ie=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="static/style.scss")
-        script(src="static/scripts.js" type="module")
-        meta(author="Ivan Robles")
-        meta(name="Ivan's Portfolio" content="This is my personal portfolio and website for more apps and other things made by me")
-        meta(name="robots" content="index, follow")
-        meta(name="keyword" content="portfolio,python,fullstack,ivan,robles,guadalajara")
-        meta(property="og:title" content="Ivan Robles | Software Dev")
-        meta(property="og:description" content="This is my personal portfolio and website for more apps and other things made by me")
-        meta(property="og:type" content="website")
-        title Ivan's Portfolio
-    body
-        //- no-script tag to inform user that must enable javascript execution to run this site
-        noscript
-            h1 YOU NEED RUN JAVASCRIPT TO USE THIS SITE
-            footer
-                small CC Ivan Robles - 2022  
-        nav.mainav
-            h1.prtfo-tit 
-                <a href="index.pug" data-tooltip="Home" data-placement="bottom">
-                    <i class="fa-solid fa-suitcase"></i></a> Portfolio
-            ul 
-                li 
-                    a(href="#" role="button" data-tooltip="Blog" data-placement="bottom")
-                        <i class="fa-solid fa-blog"></i>
-        div#bg-prt
-        block content
-        block foot
-            footer#mainfoot
-                small <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" data-tooltip="Creative Commons Attribution 4.0 International License" data-placement="top" style="color:inherit;"><img style="border-width:0" src="static/CC-BY.svg" /> CC BY 4.0</a> - Ivan Robles - 
-                    span#year
+ head
+ meta(charset="utf-8")
+ meta(http-equiv="x-ua-compatible" content="ie=edge")
+ meta(name="viewport" content="width=device-width, initial-scale=1.0")
+ // style of blog
+ link(rel="stylesheet", href="static/style.scss")
+ // site mechanics
+ script(src="static/scripts.js" type="module")
+ meta(author="Ivan Robles")
+ meta(name="Ivan's Portfolio" content="This is my personal portfolio and website for more apps and other things made by me")
+ meta(name="robots" content="index, follow")
+ meta(name="keyword" content="portfolio,python,fullstack,ivan,robles,guadalajara")
+ meta(property="og:title" content="Ivan Robles | Software Dev")
+ meta(property="og:description" content="This is my personal portfolio and website for more apps and other things made by me")
+ meta(property="og:type" content="website")
+ title Ivan's Portfolio
+ body
+  // no-script tag to inform user that must enable javascript execution to run this site
+  noscript
+   h1 YOU NEED RUN JAVASCRIPT TO USE THIS SITE
+    footer
+     small CC Ivan Robles - 2022  
+  nav.mainav
+   h1.prtfo-tit 
+    <a href="index.pug" data-tooltip="Home" data-placement="bottom"> <i class="fa-solid fa-suitcase"></i></a> Portfolio
+   ul
+    li
+     a(href="#" role="button" data-tooltip="Blog" data-placement="bottom") <i class="fa-solid fa-blog"></i>
+
+  div#bg-prt
+  main.container
+    block content
+     aside 
+      // mastodon account
+      <iframe style="border-radius:2%;" allowfullscreen sandbox="allow-top-navigation allow-scripts" width="400" height="800" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fmasto.nobigtech.es%2Fusers%2Fnavitux&theme=dark&size=100&header=false&replies=false&boosts=true"></iframe>
+     
+    block foot
+     footer#mainfoot
+      small <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" data-tooltip="Creative Commons Attribution 4.0 International License" data-placement="top" style="color:inherit;"><img style="border-width:0" src="static/CC-BY.svg" /> CC BY 4.0</a> - Ivan Robles - 
+       span#year
 
 
